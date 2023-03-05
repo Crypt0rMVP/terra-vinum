@@ -1,0 +1,140 @@
+<html>
+  <head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+  body {
+    background-image: url("https://scontent.fbru1-1.fna.fbcdn.net/v/t1.15752-9/326102666_717222139807778_36779893732940876_n.jpg?stp=dst-jpg_s2048x2048&_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=u76m_HhCPFQAX-SaCoW&_nc_ht=scontent.fbru1-1.fna&oh=03_AdR69JmMONcA9jIZvTUlTj-rxsRqxsc6_ecIEfpUXWaDbA&oe=640B07C8");
+    background-size: cover;
+  }
+
+  h1 {
+    text-align: center;
+    color: #fff;
+    font-family: 'MedievalSharp', cursive;
+    text-shadow: 2px 2px #333;
+    font-size: 50px;
+    margin-top: 50px;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 2px 2px #333;
+    color: #333;
+    font-family: sans-serif;
+  }
+
+     .buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .buttons button {
+      padding: 10px 20px;
+      background-color: #C19A6B;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      outline: none;
+      transition: background-color 0.2s ease-out;
+    }
+
+    .buttons button:hover {
+      background-color: ##C19A6B;
+    }
+
+    .description {
+      display: none;
+      width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #F8F8F8;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 18px;
+    }
+  .navigation {
+      display: flex;
+      justify-content: flex-start;
+      align-items: left;
+      padding: 10px;
+      background-color: #false;
+      color: white;
+    }
+.navigation a {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+.navigation a:hover {
+  color: lightgray;
+}
+  }
+</style>
+</head>
+<body>
+  <div style="display: flex; align-items: center;">
+    <img src="https://cdn.discordapp.com/attachments/513777516494848011/1072859740918513694/326213050_886501812613269_8907595237666494173_n.png" style="width: 50px; height: 50px; margin-right: 10px;" />
+    <h1>Terra Vinum</h1>
+  </div>
+  <header class="navigation" style="display: flex; flex-direction: column;">
+    <a href="https://www.google.com" style="background-color: #C19A6B; padding: 10px; text-align: center; width: fit-content; margin-bottom: 10px;">Home</a>
+    <a href="https://www.google.com/maps/dir//Diestsesteenweg+52,+3390+Tielt-Winge/@50.9287591,4.8738008,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47c1424b14d9bd99:0x56f0d3c39db6fa22!2m2!1d4.9438404!2d50.92878" style="background-color: #C19A6B; padding: 10px; text-align: center; width: fit-content; margin-bottom: 10px;">Locatie</a>
+    <a href="https://www.yahoo.com" style="background-color: #C19A6B; padding: 10px; text-align: center; width: fit-content; margin-bottom: 10px;">Deelnemers</a>
+    <a href="https://www.facebook.com/groups/714464520266340" style="background-color: #C19A6B; padding: 10px; text-align: center; width: fit-content; margin-bottom: 10px;">Facebook</a>
+    <a href="https://www.deschaapsheuvel.be/" style="background-color: #C19A6B; padding: 10px; text-align: center; width: fit-content; margin-bottom: 10px;">Schaapsheuvel</a>
+  </header>
+</body>
+</html>
+    <div class="container">
+      <h2>Zaterdag 26 augustus 10:00 - 17:00</h2>
+      <h2>Zondag 27 augustus 10:00 - 17:00</h2>
+      <p>Welkom bij Terra Vinum, een nieuw kampement georganiseerd op het terrein van de Schaapsheuvel!</p>
+  <div class="buttons">
+    <button id="historisch-kamp">Historisch kamp</button>
+    <button id="historische-gevechten">Historische gevechten</button>
+    <button id="volksspelen">Volksspelen</button>
+    <button id="boogschieten">Boogschieten</button>
+    <button id="ambachten">Ambachten</button>
+  </div>
+
+  <div class="description" id="historisch-kamp-description">Welkom bij ons eerste kampement.</div>
+  <div class="description" id="historische-gevechten-description"></div>
+  <div class="description" id="volksspelen-description"></div>
+  <div class="description" id="boogschieten-description"></div>
+  <div class="description" id="ambachten-description"></div>
+
+  <script>
+    const buttons = document.querySelectorAll(".buttons button");
+    const descriptions = document.querySelectorAll(".description");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const buttonId = button.getAttribute("id");
+        const descriptionId = `${buttonId}-description`;
+        const description = document.getElementById(descriptionId);
+
+        descriptions.forEach(description => {
+          description.style.display = "none";
+        });
+
+        description.style.display = "block";
+      });
+    });
+  </script>
+</body>
+</html>
+
+
